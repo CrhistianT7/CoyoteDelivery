@@ -3,6 +3,7 @@ import Footer from './components/Footer.vue';
 import Header from './components/Header.vue'
 import Hero from './components/Hero.vue'
 import Restaurant from './components/Restaurant.vue'
+import Categories from './components/Categories.vue';
 
 import { ref, onMounted } from 'vue'
 import { db } from './data/restaurantes'
@@ -21,14 +22,10 @@ onMounted(() => {
     <Header />
     <Hero />
   </section>
-  <section>
-    categorias
-  </section>
+  <Categories />
   <section>
     <div class="restaurantes">
-      <Restaurant 
-        v-for="restaurante in restaurantes"
-        :restaurante="restaurante" />
+      <Restaurant v-for="restaurante in restaurantes" :restaurante="restaurante" />
     </div>
   </section>
   <Footer />
