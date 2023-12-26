@@ -2,6 +2,7 @@ export const db = [
   {
     id: 1,
     nombre: "Restaurante 1",
+    imagen: "restaurant-image.jpg",
     platos: [
       {
         id: 1,
@@ -18,6 +19,7 @@ export const db = [
   {
     id: 2,
     nombre: "Restaurante 2",
+    imagen: "restaurant-image.jpg",
     platos: [
       {
         nombre: "Causa",

@@ -52,11 +52,11 @@
         <p>@2023 . Todos los derechos reservados.</p>
       </div>
       <div class="legal-creds">
-        <lu>
+        <ul>
           <li><a href="#">Politica de Privacidad</a></li>
           <li><a href="#">Politica de Cookies</a></li>
           <li><a href="#">Aviso Legal</a></li>
-        </lu>
+        </ul>
       </div>
     </div>
   </footer>

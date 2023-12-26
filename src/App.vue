@@ -39,5 +39,6 @@ onMounted(() => {
 .restaurantes {
   display: flex;
   flex-wrap: wrap;
+  gap: 1.5rem;
 }
 </style>

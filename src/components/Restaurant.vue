@@ -10,12 +10,18 @@
 
 <template>
   <div>
-    {{ restaurante.nombre}}
+    <img :src="'/src/assets/' + restaurante.imagen" class="restaurant-img" alt="restaurante imagen">
+    {{ restaurante.nombre }}
     <div>
-      enlace a sus platos
+      <a>Visitar restaurante</a>
     </div>
   </div>
 </template>
 
 <style scoped>
+.restaurant-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
 </style>
