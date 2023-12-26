@@ -1,44 +1,19 @@
 <script setup>
-import Footer from './components/Footer.vue';
-import Header from './components/Header.vue'
-import Hero from './components/Hero.vue'
-import Restaurant from './components/Restaurant.vue'
-import Categories from './components/Categories.vue';
+import { ref } from 'vue'
 
-import { ref, onMounted } from 'vue'
-import { db } from './data/restaurantes'
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 
 const carrito = ref([])
-const restaurantes = ref([])
-
-onMounted(() => {
-  restaurantes.value = db
-})
-
+const agregarCarrito = (plato) => {
+  console.log(plato)
+  carrito.value.push(plato)
+  console.log('se agrego carrito')
+}
 </script>
 
 <template>
-  <section class="main">
-    <Header />
-    <Hero />
-  </section>
-  <Categories />
-  <section>
-    <div class="restaurantes">
-      <Restaurant v-for="restaurante in restaurantes" :restaurante="restaurante" />
-    </div>
-  </section>
+  <Header :carrito="carrito"/>
+  <RouterView :carrito="carrito" @agregar-carrito="agregarCarrito"/>
   <Footer />
 </template>
-
-<style scoped>
-.main {
-  height: 100vh;
-}
-
-.restaurantes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-</style>

@@ -22,6 +22,7 @@ export const db = [
     imagen: "restaurant-image.jpg",
     platos: [
       {
+        id: 1,
         nombre: "Causa",
         precio: 15
       }
