@@ -2,7 +2,7 @@ export const db = [
   {
     id: 1,
     nombre: "Pizzería La Tipika",
-    imagen: "restaurant-image.jpg",
+    imagen: "tipika.jpg",
     platos: [
       {
         id: 1,
@@ -136,7 +136,7 @@ export const db = [
       },
       {
         id: 27,
-        nombre: "La Diabla (Jamon, Peperoni, Tocino y Aceitunas negras",
+        nombre: "La Diabla",
         precio: 18
       },
       {
@@ -189,7 +189,7 @@ export const db = [
   {
     id: 2,
     nombre: "Chifa 4 Dragones",
-    imagen: "restaurant-image.jpg",
+    imagen: "4 dragones.jpg",
     platos: [
       {
         id: 1,
@@ -206,7 +206,7 @@ export const db = [
   {
     id: 3,
     nombre: "Parador Chicken",
-    imagen: "restaurant-image.jpg",
+    imagen: "parador.jpg",
     platos: [
       {
         id: 1,
@@ -223,7 +223,7 @@ export const db = [
   {
     id: 4,
     nombre: "Bembos",
-    imagen: "restaurant-image.jpg",
+    imagen: "bembos.jpg",
     platos: [
       {
         id: 1,
@@ -240,7 +240,7 @@ export const db = [
   {
     id: 5,
     nombre: "La chozza de Oscar",
-    imagen: "restaurant-image.jpg",
+    imagen: "oscar.jpg",
     platos: [
       {
         id: 1,
@@ -257,7 +257,7 @@ export const db = [
   {
     id: 6,
     nombre: "Salchipaperia Palmeras",
-    imagen: "restaurant-image.jpg",
+    imagen: "palmeras.jpg",
     platos: [
       {
         id: 1,
@@ -274,7 +274,7 @@ export const db = [
   {
     id: 7,
     nombre: "Polleria El Rancho",
-    imagen: "restaurant-image.jpg",
+    imagen: "rancho.jpg",
     platos: [
       {
         id: 1,
@@ -291,7 +291,7 @@ export const db = [
   {
     id: 8,
     nombre: "Chifa Lin",
-    imagen: "restaurant-image.jpg",
+    imagen: "lin.jpg",
     platos: [
       {
         id: 1,
@@ -308,7 +308,7 @@ export const db = [
   {
     id: 9,
     nombre: "La Wallatita Kankacho",
-    imagen: "restaurant-image.jpg",
+    imagen: "wallatita.jpg",
     platos: [
       {
         id: 1,
@@ -325,7 +325,7 @@ export const db = [
   {
     id: 10,
     nombre: "Pizzería Machu pizza",
-    imagen: "restaurant-image.jpg",
+    imagen: "machupizza.jpg",
     platos: [
       {
         id: 1,
@@ -342,7 +342,7 @@ export const db = [
   {
     id: 11,
     nombre: "Pizzería Remix",
-    imagen: "restaurant-image.jpg",
+    imagen: "remix.jpg",
     platos: [
       {
         id: 1,
@@ -359,7 +359,7 @@ export const db = [
   {
     id: 12,
     nombre: "Capriccios",
-    imagen: "restaurant-image.jpg",
+    imagen: "capriccio.jpg",
     platos: [
       {
         id: 1,
@@ -375,8 +375,8 @@ export const db = [
   },
   {
     id: 13,
-    nombre: "Ricospan",
-    imagen: "restaurant-image.jpg",
+    nombre: "Ricos Pan",
+    imagen: "ricos.jpg",
     platos: [
       {
         id: 1,
@@ -393,7 +393,7 @@ export const db = [
   {
     id: 14,
     nombre: "Parrilleria Casa Grill",
-    imagen: "restaurant-image.jpg",
+    imagen: "grill.jpg",
     platos: [
       {
         id: 1,
@@ -410,7 +410,7 @@ export const db = [
   {
     id: 15,
     nombre: "Polloria el Vecino",
-    imagen: "restaurant-image.jpg",
+    imagen: "vecino.jpg",
     platos: [
       {
         id: 1,
@@ -427,7 +427,7 @@ export const db = [
   {
     id: 16,
     nombre: "Chifa Chen Xing",
-    imagen: "restaurant-image.jpg",
+    imagen: "xin.jpg",
     platos: [
       {
         id: 1,
@@ -444,7 +444,7 @@ export const db = [
   {
     id: 17,
     nombre: "La Estancia",
-    imagen: "restaurant-image.jpg",
+    imagen: "estancia.jpg",
     platos: [
       {
         id: 1,
@@ -461,7 +461,7 @@ export const db = [
   {
     id: 18,
     nombre: "Chicharroneria la Red",
-    imagen: "restaurant-image.jpg",
+    imagen: "red.jpg",
     platos: [
       {
         id: 1,
@@ -478,7 +478,7 @@ export const db = [
   {
     id: 19,
     nombre: "Cevicheria Mareas",
-    imagen: "restaurant-image.jpg",
+    imagen: "mareas.jpg",
     platos: [
       {
         id: 1,
@@ -495,7 +495,7 @@ export const db = [
   {
     id: 20,
     nombre: "Del Búho Pizzería",
-    imagen: "restaurant-image.jpg",
+    imagen: "buho.jpg",
     platos: [
       {
         id: 1,
@@ -512,7 +512,7 @@ export const db = [
   {
     id: 21,
     nombre: "Brossteria Snuoopy",
-    imagen: "restaurant-image.jpg",
+    imagen: "snoopy.jpg",
     platos: [
       {
         id: 1,
@@ -529,7 +529,7 @@ export const db = [
   {
     id: 22,
     nombre: "Ten Bento",
-    imagen: "restaurant-image.jpg",
+    imagen: "bento.jpg",
     platos: [
       {
         id: 1,
@@ -546,7 +546,7 @@ export const db = [
   {
     id: 23,
     nombre: "El Establo de Favio",
-    imagen: "restaurant-image.jpg",
+    imagen: "establo.jpg",
     platos: [
       {
         id: 1,
@@ -563,7 +563,7 @@ export const db = [
   {
     id: 24,
     nombre: "Hamburgueseria Sr. Lechon",
-    imagen: "restaurant-image.jpg",
+    imagen: "lechon.jpg",
     platos: [
       {
         id: 1,
@@ -580,7 +580,7 @@ export const db = [
   {
     id: 25,
     nombre: "Thimpo Pez de Oro",
-    imagen: "restaurant-image.jpg",
+    imagen: "pez.jpg",
     platos: [
       {
         id: 1,
@@ -597,7 +597,7 @@ export const db = [
   {
     id: 26,
     nombre: "Pizzería TuCandelas",
-    imagen: "restaurant-image.jpg",
+    imagen: "candela.jpg",
     platos: [
       {
         id: 1,
@@ -614,7 +614,7 @@ export const db = [
   {
     id: 27,
     nombre: "Pizzería Sr. Pizza",
-    imagen: "restaurant-image.jpg",
+    imagen: "pizza.jpg",
     platos: [
       {
         id: 1,
@@ -631,7 +631,7 @@ export const db = [
   {
     id: 28,
     nombre: "Cevicheria Puerto Arrecife",
-    imagen: "restaurant-image.jpg",
+    imagen: "puerto.jpg",
     platos: [
       {
         id: 1,
@@ -648,7 +648,7 @@ export const db = [
   {
     id: 29,
     nombre: "Pizzeria Sunrise",
-    imagen: "restaurant-image.jpg",
+    imagen: "sunrise.jpg",
     platos: [
       {
         id: 1,
@@ -661,22 +661,5 @@ export const db = [
         precio: 11
       }
     ]
-  },
-  {
-    id: 30,
-    nombre: "Restaurante 30",
-    imagen: "restaurant-image.jpg",
-    platos: [
-      {
-        id: 1,
-        nombre: "Ceviche",
-        precio: 12
-      },
-      {
-        id: 2,
-        nombre: "Lomo Saltado",
-        precio: 11
-      }
-    ]
-  },
+  }
 ]

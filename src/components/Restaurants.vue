@@ -12,7 +12,7 @@ const props = defineProps({
 
 <template>
   <div>
-    <img :src="'/src/assets/' + restaurante?.imagen" class="restaurant-img" :alt="'restaurante imagen'">
+    <img :src="'/src/assets/restaurantes/' + restaurante?.imagen" class="restaurant-img" :alt="'restaurante imagen'">
     {{ restaurante?.nombre }}
     <div>
       <RouterLink :to="`/restaurante/${restaurante.id}`">Visitar restaurante</RouterLink>
