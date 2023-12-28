@@ -2,13 +2,15 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const Home = () => import("../views/Home.vue");
 const About = () => import("../views/About.vue");
-const Restaurant = () => import("../views/Restaurant.vue");
+//const Restaurant = () => import("../views/Restaurant.vue");
 const RestaurantDetail = () => import("../views/RestaurantDetail.vue");
+const Carrito = () => import("../views/Carrito.vue");
 const NotFound = () => import("../views/NotFound.vue");
 
 const routes = [
   { path: "/", component: Home },
   { path: "/nosotros", component: About },
+  { path: "/carrito", component: Carrito},
   // { path: "/restaurante", component: Restaurant },
   { path: "/restaurante/:id", component: RestaurantDetail, props: true },
   {
