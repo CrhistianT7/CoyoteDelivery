@@ -33,16 +33,19 @@ const decrementarCantidad = (id, restaurante) => {
   if (carrito.value[index].cantidad > 1) {
     carrito.value[index].cantidad -= 1
   }
+  guardarLocalStorage()
 }
 
 const incrementarCantidad = (id, restaurante) => {
   const index = carrito.value.findIndex(item => item.id == id && item.restaurante == restaurante)
   carrito.value[index].cantidad += 1
+  guardarLocalStorage()
 }
 
 const eliminarPlato = (id, restaurante) => {
   console.log('eliminando')
   carrito.value = carrito.value.filter(item => !(item.id == id && item.restaurante == restaurante))
+  guardarLocalStorage()
 }
 </script>
 
