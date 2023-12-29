@@ -12,7 +12,7 @@
 <template>
   <div>
     {{plato.nombre}}
-    {{plato.precio}}
+    Precio:{{plato.precio}}
   </div>
   <div>
     <button @click="$emit('agregar-carrito', plato)">Añadir al carrito</button>

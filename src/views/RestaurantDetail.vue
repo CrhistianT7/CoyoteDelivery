@@ -27,9 +27,8 @@ const agregarCarrito = (plato) => {
 </script>
 
 <template>
-  <h1> Restaurant Details {{ $route.params.id }}</h1>
+  <h1 class="titulo">  {{ selectedRestaurant.nombre}}</h1>
   <div class="platos">
-    {{ selectedRestaurant?.nombre }}
     <PlatoCard v-for="plato in selectedRestaurant.platos" :plato="plato" @agregar-carrito="agregarCarrito" />
     <button @click="$router.back()">Ir a la pagina de inicio</button>
   </div>
@@ -37,6 +36,10 @@ const agregarCarrito = (plato) => {
 
 <style scoped>
 .platos {
+  color: #000;
   min-height: calc(100vh - 56px);
+}
+.titulo{
+  color: #000;
 }
 </style>

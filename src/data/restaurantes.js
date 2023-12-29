@@ -239,7 +239,7 @@ export const db = [
   },
   {
     id: 5,
-    nombre: "La chozza de Oscar",
+    nombre: "La Choza de Oscar",
     imagen: "oscar.jpg",
     platos: [
       {
