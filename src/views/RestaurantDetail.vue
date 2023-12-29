@@ -21,9 +21,7 @@ onMounted(() => {
 })
 
 const agregarCarrito = (plato) => {
-  // añadir cantidad a la orden
-  const cantidad = 1
-  const platoConRestaurante = { restaurante: db.filter(x => x.id == route.params.id)[0]?.nombre, ...plato , cantidad}
+  const platoConRestaurante = { restaurante: db.filter(x => x.id == route.params.id)[0]?.nombre, ...plato}
   emit('agregar-carrito', platoConRestaurante)
 }
 </script>

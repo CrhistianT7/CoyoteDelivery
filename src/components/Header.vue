@@ -28,7 +28,7 @@ const props = defineProps({
         </ul>
       </nav>
       <div class="shopping-cart">
-        <router-link to="/carrito">
+        <router-link to="/carrito" class="shopping-cart">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="16"

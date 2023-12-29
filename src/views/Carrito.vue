@@ -1,5 +1,6 @@
 <script setup>
-import { onMounted, computed } from "vue"
+import { computed } from "vue";
+import CarritoCard from "../components/CarritoCard.vue";
 
 const props = defineProps({
   carrito: {
@@ -8,20 +9,50 @@ const props = defineProps({
   },
 })
 
-console.log(props.carrito)
-console.log('a: ', props.carrito[0].restaurante)
-console.log('b: ', props.carrito.value)
+const NUMEROTELEFONO = +51929942372
 
-//+51 929 942 372
+const createFullMessage = () => {
+  let superMensaje = `La siguiente orden fue enviada:\n`
+  
+  props.carrito.forEach(item => {
+    superMensaje += `
+      ${item.restaurante}
+      ${item.nombre}
+      ${item.precio}
+      ${item.cantidad}
+    `
+  })
+
+  superMensaje += '\n Gracias por su pedido, será confirmado pronto pronto \n'
+  return superMensaje
+}
 
 const sendToWhatsapp = () => {
   console.log("send")
-  const fullMessage = props.carrito[0].restaurante
+  const fullMessage = createFullMessage()
+  console.log(fullMessage)
   window.open(
-    `https://api.whatsapp.com/send?phone=${+51929942372}&text=${encodeURIComponent(
+    `https://api.whatsapp.com/send?phone=${NUMEROTELEFONO}&text=${encodeURIComponent(
       fullMessage
     )}`
   )
+}
+const emit = defineEmits(['incrementar-cantidad', 'decrementar-cantidad', 'eliminar-plato'])
+
+const totalPagar = computed(() => {
+  return props.carrito.reduce((total, item) => total + (item.cantidad * item.precio), 0)
+})
+
+const incrementarCantidad = (id, restaurante) => {
+  emit('incrementar-cantidad', id, restaurante)
+}
+
+const decrementarCantidad = (id, restaurante) => {
+  emit('decrementar-cantidad', id, restaurante)
+}
+
+const eliminarPlato = (id, restaurante) => {
+  emit('eliminar-plato', id, restaurante)
 }
 
 </script>
@@ -31,8 +62,9 @@ const sendToWhatsapp = () => {
     El carrito esta vacio
   </div>
   <div v-else class="full-screen">
+    <CarritoCard v-for="carritoItem in carrito" :carrito-item="carritoItem" @incrementar-cantidad="incrementarCantidad" @decrementar-cantidad="decrementarCantidad" @eliminar-plato="eliminarPlato"/>
     <div>
-      {{ carrito }}
+      Total a pagar S/.: {{ totalPagar }}
     </div>
     <div>
       <button @click="sendToWhatsapp">Enviar Whatsapp</button>
@@ -43,5 +75,6 @@ const sendToWhatsapp = () => {
 <style scoped>
 .full-screen {
   min-height: calc(100vh - 56px);
+  color: #000;
 }
 </style>
