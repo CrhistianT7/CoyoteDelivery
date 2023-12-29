@@ -64,7 +64,7 @@ const eliminarPlato = (id, restaurante) => {
   <div v-else class="full-screen">
     <CarritoCard v-for="carritoItem in carrito" :carrito-item="carritoItem" @incrementar-cantidad="incrementarCantidad" @decrementar-cantidad="decrementarCantidad" @eliminar-plato="eliminarPlato"/>
     <div>
-      Total a pagar S/.: {{ totalPagar }}
+      Total a pagar S/. {{ totalPagar }}
     </div>
     <div>
       <button @click="sendToWhatsapp">Enviar Whatsapp</button>
