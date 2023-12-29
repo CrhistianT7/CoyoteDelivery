@@ -1,12 +1,30 @@
 <script setup>
 
+import { ref, onMounted } from 'vue';
+import { db } from '../data/restaurantes'
+import { useRouter } from 'vue-router';
+
+const restaurantes = ref([])
+
+onMounted(() => {
+  restaurantes.value = db
+})
+
+const router = useRouter()
+
+const handleChange = (event) => {
+  const index = restaurantes.value.findIndex(x => x.nombre.includes(event.target.value))
+  if(index < 0) return
+  router.push({ path: `/restaurante/${restaurantes.value[index].id}` })
+}
+
 </script>
 
 <template>
   <section>
     <br><b>CATEGORIAS</b><br/>
       <div>
-          <select>
+          <select @change="handleChange($event)">
             <option>PIZZAS</option>
             <option>La Tipika</option>
             <option>Machu Pizza</option>
@@ -16,13 +34,13 @@
             <option>Sr. Pizza</option>
             <option>Sunrise</option>
           </select>
-          <select>
+          <select @change="handleChange($event)">
             <option>CHIFAS</option>
             <option>4 Dragones</option>
             <option>Chifa Lin</option>
             <option>Chifa Chen Xing</option> 
           </select>
-          <select>
+          <select @change="handleChange($event)">
             <option>POLLERIAS</option>
             <option>Parador Chicken</option>
             <option>La Choza de Oscar</option>
@@ -30,43 +48,43 @@
             <option>Polleria el Vecino</option>
             <option>El Establo de Favio</option>
           </select>
-          <select>
+          <select @change="handleChange($event)">
             <option>BROSTERIA & SALCHIPAPERIA</option>
             <option>Palmeras</option>
             <option>Snoopy</option>
           </select>
-          <select>
+          <select @change="handleChange($event)">
             <option>CEVICHE</option>
             <option>Mareas</option>
             <option>Puerto Arrecife</option>
           </select>
-          <select>
+          <select @change="handleChange($event)">
             <option>HAMBURGUESAS</option>
             <option>Bembos</option>
             <option>Sr. Lechon</option>
           </select>
-          <select>
+          <select @change="handleChange($event)">
             <option>CHICHARRON</option>
             <option>La Red</option>
           </select>
-          <select>
+          <select @change="handleChange($event)">
             <option>PARRILLA</option>
             <option>La Estancia</option>
             <option>Casa Grill</option>
           </select>
-          <select>
+          <select @change="handleChange($event)">
             <option>KANKACHO</option>
             <option>La Wallatita Kankacho</option>
           </select>
-          <select>
+          <select @change="handleChange($event)">
             <option>SUSHI</option>
             <option>Ten Bento</option>
           </select> 
-          <select>
+          <select @change="handleChange($event)">
             <option>TIMPO</option>
             <option>Pez de Oro</option>
           </select>
-          <select>
+          <select @change="handleChange($event)">
             <option>POSTRES</option>
             <option>Ricos Pan</option>
             <option>Capriccios</option>

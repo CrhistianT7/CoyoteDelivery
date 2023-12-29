@@ -511,7 +511,7 @@ export const db = [
   },
   {
     id: 21,
-    nombre: "Brossteria Snuoopy",
+    nombre: "Brossteria Snoopy",
     imagen: "snoopy.jpg",
     platos: [
       {
